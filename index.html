@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="text/javascript" href="js/materialize.min.js">
+    <link rel="text/javascript" href="js/jquery.js">
+    <link rel="text/javascript" href="js/init.js">
+    <title>Marveline</title>
+  </head>
+  <style media="screen">
+    #IMG1{
+      width: 40%;
+    }
+    #LOG1{
+      margin-top: -0.5%;
+    }
+    @media only screen and (max-width: 600px){
+      .searchbarfix{
+        height: 56px !important;
+      }
+    }
+    @media only screen and (min-width: 601px){
+      .searchbarfix{
+        height: 64px !important;
+      }
+    }
+    .navfix {
+      position:relative;
+      margin-right: 0;
+      background-color: #f44336;
+    }
+    .navfix2 {
+      position:absolute;
+      background-color: #f44336;
+    }
+    .card-panel{
+      margin-top: -2%;
+      padding: -5%;
+    }
+    div.scrollmenu {
+      overflow: auto;
+      white-space: nowrap;
+    }
+
+    div.scrollmenu a {
+      display: inline-block;
+      text-align: center;
+      padding: 14px;
+      text-decoration: none;
+    }
+
+    div.scrollmenu a:hover {
+      background-color: #777;
+    }
+    #NAV1{
+      position: fixed;
+    }
+    #slide-out{
+      width: 240px;
+      margin-top: 4.25rem;
+    }
+    #IMG2{
+      width: 240px;
+    }
+    #PRO1{
+      display: inline-block;
+      float: right;
+      margin-right: -5%;
+    }
+    #PRO2{
+      display: inline-block;
+      float: right;
+      margin-right: -20%;
+    }
+    #PRO3{
+      display: inline-block;
+      float: right;
+      margin-right: -40%;
+    }
+    #PRO4{
+      display: inline-block;
+      float: right;
+      margin-right: -63%;
+    }
+    #PRO5{
+      display: inline-block;
+      float: right;
+      margin-right: -90%;
+      margin-top: -134%;
+    }
+    #PRO51{
+      display: inline-block;
+      float: right;
+      margin-right: -90%;
+      margin-top: -135%;
+    }
+    #PRO52{
+      display: inline-block;
+      float: right;
+      margin-right: -90%;
+      margin-top: -135%;
+    }
+    #COL5{
+      margin-top: -2%;
+      display: inline-block;
+    }
+    #COL51{
+      margin-top: -4%;
+      display: inline-block;
+    }
+    #COL52{
+      margin-top: -4%;
+      display: inline-block;
+    }
+    #NAV2{
+      margin-top: -2%;
+    }
+    #CAMI{
+      width: 240px;
+    }
+    #HEC{
+      margin-top: -1em;
+      margin-bottom: -1em;
+    }
+  </style>
+  <body class="loaded">
+
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
+    <header id="header" class="page-topbar">
+      <!-- Dropdown Structure -->
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a class="text-align black-text" href="form.html"><i class="text-align small material-icons">shopping_cart</i>Compras</a></li>
+        <li><a class="black-text" href="#HEC">Proximamente!!</a></li>
+        <li class="divider"></li>
+        <li><a class="modal-trigger black-text" href="#modal1">Cerrar Sesion</a></li>
+      </ul>
+
+      <nav id="NAV1" class="navbar-fixed red accent-4">
+        <div>
+          <div class="nav-wrapper">
+            <ul class="center">
+              <li><h1 id="LOG1" class="logo-wrapper"><img id="IMG1" class="responsive-img" src="img/LOGO1.png" alt="materialize logo"></h1></li>
+            </ul>
+
+            <ul class="center">
+              <li>
+                <form id="navbarsearch">
+                  <div class="navfix">
+                    <div id="navfix2">
+                      <div class="input-field">
+                        <input id="search" type="search" required>
+                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons">close</i>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </li>
+              <li>
+                <a class="activated" href="#">Buscar</a>
+              </li>
+            </ul>
+
+            <ul class="right hide-on-med-and-down">
+              <li><a class="search-hide" href="https://www.marvel.com/">Noticias</a></li>
+              <li><a class="search-hide" href="#PRODUCTS">Productos</a></li>
+              <!-- Dropdown Trigger -->
+              <li><a class="dropdown-trigger search-hide" href="#!" data-target="dropdown1">Opciones de perfil<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </header>
+    <!-- END HEADER -->
+    <div id="modal1" class="modal">
+      <div class="card-panel red accent-4 white-text z-depth-2">
+        <h4 class="center-align">Te vas tan pronto!!</h4>
+      </div>
+      <div class="modal-content">
+        <h6 class="center">No te vayas, tal vez encuentras lo que buscabas...</h6>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="modal-close waves-effect waves-green btn-flat">Cancelar!</a>
+        <a href="index.html" class="modal-close waves-effect waves-green btn-flat">Aceptar!</a>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col s3 left">
+        <ul id="slide-out" class="sidenav sidenav-fixed">
+          <li>
+            <div class="user-view">
+            <div class="background">
+              <img src="img/MAT1.jpg">
+            </div>
+             <a href="#user"><img class="circle" src="img/PRO1.jpg"></a>
+             <a href="#name"><span class="white-text name">Joel Creeper</span></a>
+             <a href="#email"><span class="white-text email">CreepTMFN@gmail.com</span></a>
+             <a href="#email"><span class="white-text light">Comprador Junior</span></a>
+            </div>
+            <ul id="dropdown2" class="dropdown-content">
+              <li><a class="text-align black-text" href="form.html"><i class="text-align small material-icons">shopping_cart</i>Compras</a></li>
+              <li><a href="#!">two</a></li>
+              <li class="divider"></li>
+              <li><a class="modal-trigger" href="#modal1">Cerrar Sesion</a></li>
+            </ul>
+         </li>
+           <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Opciones de perfil<i class="material-icons right">arrow_drop_down</i></a></li>
+           <ul class="section table-of-contents">
+             <li><a href="#HEC">Hacia el Cielo!<i href="#!" class="material-icons right">cloud</i></a></li>
+           </ul>
+           <li><div class="divider"></div></li>
+           <li><a class="subheader">Opciones</a></li>
+           <li><a class="waves-effect modal-trigger" href="#modal2">Cerrar Sesion...</a></li>
+         </ul>
+         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>
+
+
+      <div id="HEC" class="col s10 section scrollspy right">
+        <div class="slider">
+          <ul class="slides">
+            <li>
+              <img src="img/MAR1.jpg" alt="">
+              <div class="caption center-align">
+              </div>
+            </li>
+
+            <li>
+              <img src="img/MAR2.jpg" alt="">
+              <div class="caption left-align">
+              </div>
+            </li>
+
+            <li>
+              <img src="img/MAR3.jpg" alt="">
+              <div class="caption right-align">
+              </div>
+            </li>
+
+            <li>
+              <img src="img/MAR4.jpg" alt="">
+              <div class="caption left-align">
+              </div>
+            </li>
+          </ul>
+      </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s10 right">
+        <div class="card-panel red accent-4 white-text z-depth-2">
+          <h5 id="PRODUCTS" class="center-align section scrollspy">Productos</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12 right">
+        <nav>
+         <div id="NAV2" class="nav-wrapper red accent-4 white-text red accent-4">
+           <div class="row">
+             <div class="col s9">
+               <div class="center">
+                 <a href="#!" class="breadcrumb">Productos</a>
+                 <a href="#!" class="breadcrumb">Vestuario</a>
+               </div>
+             </div>
+           </div>
+         </div>
+       </nav>
+      </div>
+    </div>
+
+    <div class="scrollmenu">
+      <div class="row">
+          <div class="col s3 right">
+            <div id="PRO1" class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img id="CAMI" class="activator" src="img/CAM1.png">
+              </div>
+              <div class="card-content">
+                <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red accent-4 red accent-4">Q.99 U</a>
+                <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red lighten-4 red accent-4">Q.60 D</a>
+                <span class="card-title activator grey-text text-darken-4">Deadpool T-Shirt<i class="material-icons right">more_vert</i></span>
+                <p><a href="form1.html">Ordena Ya!!</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Deadpool T-Shirt<i class="material-icons right">close</i></span>
+                <h5>Tallas Disponibles:</h5>
+                <p>S, M, L, XL.</p>
+                <h5>Colores:</h5>
+                <p>Blanco y Negro.</p>
+                <h5>Descripcion:</h5>
+                <p>Camisa de algodon con estampado <br> de alta calidad y firmeza ante <br> lavadas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s3 right">
+            <div id="PRO2" class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img id="CAMI" class="activator" src="img/CAM2.jpg">
+              </div>
+              <div class="card-content">
+                <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red accent-4 red accent-4">Q.99 U</a>
+                <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red lighten-4 red accent-4">Q.60 D</a>
+                <span class="card-title activator grey-text text-darken-4">Avengers T-Shirt<i class="material-icons right">more_vert</i></span>
+                <p><a href="form2.html">Ordena Ya!!</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Avengers T-Shirt<i class="material-icons right">close</i></span>
+                <h5>Tallas Disponibles:</h5>
+                <p>S, M, L, X, XL.</p>
+                <h5>Colores:</h5>
+                <p>Blanco y Gris.</p>
+                <h5>Descripcion:</h5>
+              <p>Camisa de algodon con <br> estampado de alta calidad y <br> firmeza ante lavadas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s3 right">
+            <div id="PRO3" class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img id="CAMI" class="activator" src="img/CAM3.jpg">
+              </div>
+              <div class="card-content">
+                <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red accent-4 red accent-4">Q.99 U</a>
+                <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red lighten-4 red accent-4">Q.60 D</a>
+                <span class="card-title activator grey-text text-darken-4">Gamora T-Shirt<i class="material-icons right">more_vert</i></span>
+                <p><a href="form3.html">Ordena Ya!!</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Gamora T-Shirt<i class="material-icons right">close</i></span>
+                <h5>Tallas Disponibles:</h5>
+                <p>S, M, L, X, XL.</p>
+                <h5>Colores:</h5>
+                <p>Negro y Gris</p>
+                <h5>Descripcion:</h5>
+                <p>Camisa de algodon con <br> estampado de alta calidad y <br> firmeza ante lavadas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s3 right">
+            <div id="PRO4" class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img id="CAMI" class="activator" src="img/CAM4.jpg">
+              </div>
+              <div class="card-content">
+                <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red accent-4 red accent-4">Q.99 U</a>
+                <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red lighten-4 red accent-4">Q.60 D</a>
+                <span class="card-title activator grey-text text-darken-4">Marvel T-Shirt<i class="material-icons right">more_vert</i></span>
+                <p><a href="form4.html">Ordena Ya!!</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Marvel T-Shirt<i class="material-icons right">close</i></span>
+                <h5>Tallas Disponibles:</h5>
+                <p>S, M, L, X, XL.</p>
+                <h5>Colores:</h5>
+                <p>Revistas y Vintage</p>
+                <h5>Descripcion:</h5>
+                <p>Camisa de algodon con <br> estampado de alta calidad y <br> firmeza ante lavadas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="COL5" class="col s3 right">
+            <div id="PRO5" class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img id="CAMI" class="activator" src="img/CAM4.jpg">
+              </div>
+              <div class="card-content">
+                <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red accent-4 red accent-4">Q.99 U</a>
+                <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red lighten-4 red accent-4">Q.60 D</a>
+                <span class="card-title activator grey-text text-darken-4">Marvel T-Shirt<i class="material-icons right">more_vert</i></span>
+                <p><a href="form4.html">Ordena Ya!!</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Marvel T-Shirt<i class="material-icons right">close</i></span>
+                <h5>Tallas Disponibles:</h5>
+                <p>S, M, L, X, XL.</p>
+                <h5>Colores:</h5>
+                <p>Azul, Rojo, Negro.</p>
+                <h5>Descripcion:</h5>
+                <p>Camisa de algodon con <br> estampado de alta calidad y <br> firmeza ante lavadas.</p>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col s12 right">
+        <nav>
+         <div class="nav-wrapper red accent-4 white-text red accent-4">
+           <div class="row">
+             <div class="col s9">
+               <div class="center">
+                 <a href="#!" class="breadcrumb">Productos</a>
+                 <a href="#!" class="breadcrumb">Accesorios</a>
+               </div>
+             </div>
+           </div>
+         </div>
+       </nav>
+      </div>
+    </div>
+
+    <div class="scrollmenu">
+    <div class="row">
+      <div class="col s3 right">
+        <div id="PRO1" class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img id="CAMI" class="activator" src="img/ACC1.jpg">
+          </div>
+          <div class="card-content">
+            <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red accent-4 red accent-4">Q.250U</a>
+            <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red lighten-4 red accent-4">Q.199D</a>
+            <span class="card-title activator grey-text text-darken-4">Capitan A.<br>Deluxe Edi. Clock<i class="material-icons right">more_vert</i></span>
+            <p><a href="form5.html">Ordena Ya!!</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Capitan A.<br>Deluxe Edi. Clock<i class="material-icons right">close</i></span>
+            <h5>Tallas Disponibles:</h5>
+            <p>8, 11, 14 y 17.</p>
+            <h5>Colores:</h5>
+            <p>Azul-gris y Azul-plata</p>
+            <h5>Descripcion:</h5>
+            <p>Reloj edicion Deluxe 80th <br> Aniversario de Marvel creado <br> por Invicta, con materiales de <br> alta gamma.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s3 right">
+        <div id="PRO2" class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img id="CAMI" class="activator" src="img/ACC2.jpg">
+          </div>
+          <div class="card-content">
+            <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red accent-4 red accent-4">Q.199U</a>
+            <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red lighten-4 red accent-4">Q.150D</a>
+            <span class="card-title activator grey-text text-darken-4">Bracelet <br>Edition 80th Aniv.<i class="material-icons right">more_vert</i></span>
+            <p><a href="form6.html">Ordena Ya!!</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Bracelet <br>Edition 80th Aniv.<i class="material-icons right">close</i></span>
+            <h5>Tallas Disponibles:</h5>
+            <p>8, 11, 14 y 17.</p>
+            <h5>Colores:</h5>
+            <p>Negro y Negro-plata</p>
+            <h5>Descripcion:</h5>
+            <p>Brazalete Edicion 80th <br> aniversario de Marvel creado <br> por artesanos del cuero y <br> utilizando metales finos.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s3 right">
+        <div id="PRO3" class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img id="CAMI" class="activator" src="img/ACC3.jpg">
+          </div>
+          <div class="card-content">
+            <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red accent-4 red accent-4">Q.399U</a>
+            <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red lighten-4 red accent-4">Q.300D</a>
+            <span class="card-title activator grey-text text-darken-4">Medallon <br>80th Aniversario<i class="material-icons right">more_vert</i></span>
+            <p><a href="form7.html">Ordena Ya!!</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Medallon <br>80th Aniversario<i class="material-icons right">close</i></span>
+            <h5>Dimensiones</h5>
+            <p>Ratio.1.50 plg * Width 5.00 mm</p>
+            <h5>colores:</h5>
+            <p>Shield y Hydra</p>
+            <h5>Descripcion:</h5>
+            <p>Medallon de Coleccion S.H.I.E.L.D <br> hecho con Plata Italiana <br> por una casa Joyera Famosa <br> de Paris, para conmemorar <br> el 80th Aniversario de <br> Marvel Comics.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s3 right">
+        <div id="PRO4" class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img id="CAMI" class="activator" src="img/ACC4.jpg">
+          </div>
+          <div class="card-content">
+            <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red accent-4 red accent-4">Q.150U</a>
+            <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red lighten-4 red accent-4">Q.99 D</a>
+            <span class="card-title activator grey-text text-darken-4">Delantal Cap.<br>America<i class="material-icons right">more_vert</i></span>
+            <p><a href="form8.html">Ordena Ya!!</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Delantal Cap.<br>America<i class="material-icons right">close</i></span>
+            <h5>Tallas Disponibles:</h5>
+            <p>S, M, L, X, XL.</p>
+            <h5>Colores:</h5>
+            <p>Negro y Vintage</p>
+            <h5>Descripcion:</h5>
+            <p>Delantal de cocina del <br> Capitan America, producto <br> marvel original</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="COL51" class="col s3 right">
+        <div id="PRO51" class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img id="CAMI" class="activator" src="img/ACC4.jpg">
+          </div>
+          <div class="card-content">
+            <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red accent-4 red accent-4">Q.150U</a>
+            <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red lighten-4 red accent-4">Q.99 D</a>
+            <span class="card-title activator grey-text text-darken-4">Delantal Cap.<br>America<i class="material-icons right">more_vert</i></span>
+            <p><a href="form8.html">Ordena Ya!!</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Delantal Cap.<br>America<i class="material-icons right">close</i></span>
+            <h5>Tallas Disponibles:</h5>
+            <p>S, M, L, X, XL.</p>
+            <h5>Colores:</h5>
+            <p>Rojo, Negro, Gris y Azul</p>
+            <h5>Descripcion:</h5>
+            <p>Delantal de cocina del <br> Capitan America, producto <br> marvel original</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="row">
+      <div class="row">
+        <div class="col s12 right">
+          <nav>
+           <div class="nav-wrapper red accent-4 white-text red accent-4">
+             <div class="row">
+               <div class="col s9">
+                 <div class="center">
+                   <a href="#!" class="breadcrumb">Productos</a>
+                   <a href="#!" class="breadcrumb">Juguetes</a>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="scrollmenu">
+    <div class="row">
+      <div class="col s3 right">
+        <div id="PRO1" class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img id="CAMI" class="activator" src="img/JUG1.jpg">
+          </div>
+          <div class="card-content">
+            <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red accent-4 red accent-4">Q.999U</a>
+            <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red lighten-4 red accent-4">Q.800D</a>
+            <span class="card-title activator grey-text text-darken-4">Casco Iron Man<br>Marvel Legends<i class="material-icons right">more_vert</i></span>
+            <p><a href="form9.html">Ordena Ya!!</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Casco Iron Man<br>Marvel Legends<i class="material-icons right">close</i></span>
+            <h5>Tallas Disponibles:</h5>
+            <p>S, M, L, X, XL.</p>
+            <h5>Colores:</h5>
+            <p>Rojo y Amarillo</p>
+            <h5>Descripcion:</h5>
+            <p>Casco de Iron Man A <br> Escala real, imitando <br> cada centimetro del real.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s3 right">
+        <div id="PRO2" class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img id="CAMI" class="activator" src="img/JUG2.jpg">
+          </div>
+          <div class="card-content">
+            <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red accent-4 red accent-4">Q.999U</a>
+            <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red lighten-4 red accent-4">Q.800D</a>
+            <span class="card-title activator grey-text text-darken-4">Casco Starlord<br>Marvel Legends<i class="material-icons right">more_vert</i></span>
+            <p><a href="form10.html">Ordena Ya!!</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Casco Starlord<br>Marvel Legends<i class="material-icons right">close</i></span>
+            <h5>Tallas Disponibles:</h5>
+            <p>S, M, L, X, XL.</p>
+            <h5>Colores:</h5>
+            <p>Negro y Dorado</p>
+            <h5>Descripcion:</h5>
+            <p>Casco de Starlord A <br> Escala real, imitando <br> cada centimetro del real.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s3 right">
+        <div id="PRO3" class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img id="CAMI" class="activator" src="img/JUG33.png">
+          </div>
+          <div class="card-content">
+            <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red accent-4 red accent-4">Q.999U</a>
+            <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red lighten-4 red accent-4">Q.800D</a>
+            <span class="card-title activator grey-text text-darken-4">Cpt. America<br>Shield Legends<i class="material-icons right">more_vert</i></span>
+            <p><a href="form11.html">Ordena Ya!!</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Cpt. America<br>Shield Legends<i class="material-icons right">close</i></span>
+            <h5>Tallas Disponibles:</h5>
+            <p>S, M, L, X, XL.</p>
+            <h5>Colores:</h5>
+            <p>Azul, plateado y Rojo</p>
+            <h5>Descripcion:</h5>
+            <p>Escudo del Capitan America <br> A Escala real, imitando <br> cada centimetro del real.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s3 right">
+        <div id="PRO4" class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img id="CAMI" class="activator" src="img/JUG4.png">
+          </div>
+          <div class="card-content">
+            <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red accent-4 red accent-4">Q.999U</a>
+            <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red lighten-4 red accent-4">Q.800D</a>
+            <span class="card-title activator grey-text text-darken-4">Thor Mjolnir<br>Marvel Legends<i class="material-icons right">more_vert</i></span>
+            <p><a href="form12.html">Ordena Ya!!</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Thor Mjolnir<br>Marvel Legends<i class="material-icons right">close</i></span>
+            <h5>Tallas Disponibles:</h5>
+            <p>S, M, L, X, XL.</p>
+            <h5>Colores:</h5>
+            <p>Gris y Cafe</p>
+            <h5>Descripcion:</h5>
+            <p>Mjolnir de Thor A <br> Escala real, imitando <br> cada centimetro del real.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="COL52" class="col s3 right">
+        <div id="PRO52" class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img id="CAMI" class="activator" src="img/JUG4.png">
+          </div>
+          <div class="card-content">
+            <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red accent-4 red accent-4">Q.999U</a>
+            <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light red lighten-4 red accent-4">Q.800D</a>
+            <span class="card-title activator grey-text text-darken-4">Thor Mjolnir<br>Marvel Legends<i class="material-icons right">more_vert</i></span>
+            <p><a href="form12.html">Ordena Ya!!</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Thor Mjolnir<br>Marvel Legends<i class="material-icons right">close</i></span>
+            <h5>Tallas Disponibles:</h5>
+            <p>S, M, L, X, XL.</p>
+            <h5>Colores:</h5>
+            <p>Gris y Cafe</p>
+            <h5>Descripcion:</h5>
+            <p>Mjolnir de Thor A <br> Escala real, imitando <br> cada centimetro del real.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </div>
+
+
+  </body>
+
+  <script type="text/javascript" src="js/materialize.min.js">  </script>
+  <script type="text/javascript" src="js/jquery.js">  </script>
+  <script type="text/javascript" src="js/init.js">  </script>
+
+  <script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems,{
+      preventScrolling: false,
+    });
+    var instance = M.Sidenav.getInstance(elem,{
+      isFixed: true;
+      isOpen: true;
+    });
+  });
+  </script>
+
+  <script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.scrollspy');
+    var instances = M.ScrollSpy.init(elems,{
+      throttle: 5,
+      scrollOffset: 10,
+    });
+  });
+  </script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems,{
+      opacity: 0.5,
+      inDuration: 1000
+    });
+  });//Formulario emergente
+  </script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems,{
+      indicators: false,
+      duration: 2000,
+      interval: 3500
+    });
+  });//Sliders
+  </script>
+
+  <script type="text/javascript">
+    alert("Desea recibir Notificaciones de los nuevos productos que ingresen a la tienda siempre?")
+    var ING1 = prompt("Ingrese su E-mail: ");
+    console.log(ING1);
+    var ING2 = prompt("Ingrese su Nombre: ");
+    console.log(ING2);
+  </script>
+
+  <script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems,{
+      hover: true,
+      coverTrigger: false
+    });
+  });
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+  var trig = 1;
+  //parche para chrome
+  $("#search").addClass('searchbarfix');
+    //animacion para que la barra de busqueda se aumente en 150%
+    $('#search').click(function(e) {
+         //manejador de lo que ocurre en el nav cuando se cliquea la search bar
+      $('.search-hide').addClass('hide');
+     if (trig == 1){
+        $('#navfix2').animate({
+          width: '+=150',
+          marginRight: 0
+        }, 400);
+       trig ++;
+       }
+    });
+    //si el usuario cliquea o sale de la search bar se reduce a su tamaño normal
+    $("#search").focusout(function() {
+        $('#navfix2').animate({
+        width: '-=150'
+      }, 400);
+     trig = trig - 1;
+      //maneja la visibilidad de otros elementos del nav
+  		$('.search-hide').removeClass('hide');
+    });
+  });
+  </script>
+  <footer class="page-footer red accent-4">
+    <div class="footer-copyright">
+      <div class="container">
+          <span>Copyright © 2015 <a class="grey-text text-lighten-4" href="http://themeforest.net/user/geekslabs/portfolio?ref=geekslabs" target="_blank">Maren</a> All rights reserved.</span>
+          <span class="right"> Design and Developed by <a class="grey-text text-lighten-4" href="http://geekslabs.com/">Maren</a></span>
+      </div>
+    </div>
+  </footer>
+</html>

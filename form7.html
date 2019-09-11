@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="text/javascript" href="js/materialize.min.js">
+    <link rel="text/javascript" href="js/jquery.js">
+    <link rel="text/javascript" href="js/init.js">
+    <title>Marveline</title>
+  </head>
+  <style media="screen">
+    #IMG1{
+      width: 40%;
+    }
+    #LOG1{
+      margin-top: -0.5%;
+    }
+    @media only screen and (max-width: 600px){
+      .searchbarfix{
+        height: 56px !important;
+      }
+    }
+    @media only screen and (min-width: 601px){
+      .searchbarfix{
+        height: 64px !important;
+      }
+    }
+    .navfix {
+      position:relative;
+      margin-right: 0;
+      background-color: #f44336;
+    }
+    .navfix2 {
+      position:absolute;
+      background-color: #f44336;
+    }
+    .card-panel{
+      margin-top: -2%;
+      padding: -5%;
+    }
+    #NAV1{
+      position: fixed;
+    }
+    #slide-out{
+      width: 240px;
+      margin-top: 4.25rem;
+    }
+    #IMG2{
+      width: 60%;
+    }
+    #PRO1{
+      display: inline-block;
+      float: right;
+    }
+    #PRO2{
+      display: inline-block;
+      float: right;
+      margin-right: -20%;
+    }
+    #PRO3{
+      display: inline-block;
+      float: right;
+      margin-right: -40%;
+    }
+    #PRO4{
+      display: inline-block;
+      float: right;
+      margin-right: -60%;
+    }
+    #NAV2{
+      margin-top: -3%;
+    }
+    #CAMI{
+      width:240px;
+    }
+    #FORMAT1{
+      margin-left: 18%;
+      margin-bottom: -3%;
+      padding-top: 5%;
+    }
+    #FORMAT2{
+      margin-left: 18%;
+      margin-bottom: -3%;
+    }
+    #FORM1{
+      margin-left: 20%;
+      margin-top: 1%;
+      float: right;
+    }
+    #TAB1{
+      float: right;
+    }
+    #ACE{
+      display: none;
+      margin-left: 20%;
+    }
+    #VEN{
+      background: #772726;
+      color: #FFFFFF;
+    }
+  </style>
+  <body class="loaded">
+
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
+    <header id="header" class="page-topbar">
+      <!-- Dropdown Structure -->
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a class="text-align black-text" href="form.html"><i class="text-align small material-icons">shopping_cart</i>Compras</a></li>
+        <li><a class="black-text" href="#HEC">Proximamente!!</a></li>
+        <li class="divider"></li>
+        <li><a class="modal-trigger black-text" href="#modal1">Cerrar Sesion</a></li>
+      </ul>
+
+      <nav id="NAV1" class="navbar-fixed red accent-4">
+        <div>
+          <div class="nav-wrapper">
+            <ul class="center">
+              <li><h1 id="LOG1" class="logo-wrapper"><img id="IMG1" class="responsive-img" src="img/LOGO1.png" alt="materialize logo"></a></h1></li>
+            </ul>
+
+            <ul class="center">
+              <li>
+                <form id="navbarsearch">
+                  <div class="navfix">
+                    <div id="navfix2">
+                      <div class="input-field">
+                        <input id="search" type="search" required>
+                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons">close</i>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </li>
+              <li>
+                <a class="activated" href="#">Buscar</a>
+              </li>
+            </ul>
+
+            <ul class="right hide-on-med-and-down">
+              <li><a class="search-hide" href="https://www.marvel.com/">Noticias</a></li>
+              <li><a class="search-hide" href="index.html">Productos</a></li>
+              <!-- Dropdown Trigger -->
+              <li><a class="dropdown-trigger search-hide" href="#!" data-target="dropdown1">Opciones de perfil<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </header>
+    <!-- END HEADER -->
+    <div class="row">
+
+      <div class="col s3 left">
+        <ul id="slide-out" class="sidenav sidenav-fixed">
+          <li>
+            <div class="user-view">
+            <div class="background">
+              <img src="img/MAT1.jpg">
+            </div>
+             <a href="#user"><img class="circle" src="img/PRO1.jpg"></a>
+             <a href="#name"><span class="white-text name">Joel Creeper</span></a>
+             <a href="#email"><span class="white-text email">CreepTMFN@gmail.com</span></a>
+            </div>
+         </li>
+           <li><a href="#!">First Link</a></li>
+           <li><a href="#!">Second Link</a></li>
+           <li><div class="divider"></div></li>
+           <li><a class="subheader">Subheader</a></li>
+           <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+         </ul>
+         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>
+
+        <div id="FORMAT1" class="row">
+          <div class="col s12">
+            <h4 class="center">Datos de Compra</h4>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col s6">
+            <article class="right-align">
+              <figure>
+                  <div class="carousel carousel-slider">
+                    <a class="carousel-item" href="#one!"><img id="IMG2" src="img/ACC3.jpg" alt=""></a>
+                    <a class="carousel-item" href="#two!"><img id="IMG2" src="img/ACC33.jpg" alt=""></a>
+                  </div>
+              </figure>
+            </article>
+          </div>
+
+            <div id="TAB1" class="col s6">
+              <h5 class="center">Especificaciones del producto</h5>
+                <table class="responsive-table">
+                  <thead>
+                    <tr>
+                        <th class="center-align">Tallas</th>
+                        <th class="center-align">Colores</th>
+                        <th class="center-align">Precio Docena</th>
+                        <th class="center-align">Precio Unidad</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td class="center-align">Ratio.1.50 plg * Width 5.00 mm</td>
+                      <td class="center-align">Shield y Hydra</td>
+                      <td class="center-align">Q.300.00</td>
+                      <td class="center-align">Q.399.00</td>
+                    </tr>
+                    <tr>
+                      <td class="center-align">----</td>
+                      <td class="center-align">----</td>
+                      <td class="center-align">----</td>
+                      <td class="center-align">----</td>
+                    </tr>
+                    <tr>
+                      <td class="center-align">----</td>
+                      <td class="center-align">----</td>
+                      <td class="center-align">----</td>
+                      <td class="center-align">----</td>
+                    </tr>
+                    <tr>
+                      <td class="center-align">----</td>
+                      <td class="center-align">----</td>
+                      <td class="center-align">----</td>
+                      <td class="center-align">----</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+
+        <div id="ACE" class="container center">
+          <div class="container right-align">
+            <div class="row right-align">
+              <div class="col s12">
+                <div id="VEN">
+                  <div class="card-panel red accent-4 white-text z-depth-2">
+                    <h5 class="center-align">Felicidades!</h5>
+                  </div>
+                  <div class="container">
+                    <h6 class="center">Transaccion realizada exitosamente!!</h6>
+                    <h6 class="center">Gracias Por su compra!!</h6>
+                  </div>
+                  <div class="container center-align">
+                    <a href="index.html" class="waves-effect waves-green btn-flat white-text" style="background: #F44336; margin: 2%;">ver mas productos!</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form id="Formulario" action="form.html" method="post">
+
+        <div id="FORMAT2" class="form-group row">
+          <div id="FORM1" class="col s12 right">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="FNAME" type="text" name="NOMBRE" value="" class="validate" required>
+              <label for="icon_prefix">Nombres</label>
+              <span class="helper-text" data-error="este campo es requerido!" data-success="campo llenado correctamente">Ingrese Nombre</span>
+            </div>
+            <div class="input-field col s6">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="LNAME" type="text" name="APELLIDO" value="" class="validate" required>
+              <label for="icon_prefix">Apellidos</label>
+              <span class="helper-text" data-error="este campo es requerido!" data-success="campo llenado correctamente">Ingrese Apellido</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="FORMAT2" class="form-group row">
+          <div id="FORM1" class="col s12 right">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">phone</i>
+              <input id="CELPH" type="tel" name="TELEFONO" value="" class="validate" required>
+              <label for="icon_telephone">Teléfono</label>
+              <span class="helper-text" data-error="este campo es requerido!" data-success="campo llenado correctamente">Ingrese Numero Telefonico con codigo de lada...</span>
+            </div>
+            <div class="input-field col s6">
+              <i class="material-icons prefix">mail_outline</i>
+              <input id="EMAIL" type="email" name="EMAIL" class="validate" required>
+              <label for="email">Email</label>
+              <span class="helper-text" data-error="este campo es requerido!" data-success="campo llenado correctamente">Ingrese correo</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="FORMAT2" class="form-group row">
+          <div id="FORM1" class="col s12 right">
+            <div class="input-field col s4">
+              <i class="material-icons prefix">credit_card</i>
+              <input id="CRECA" type="tel" name="CREDIT" value="" class="validate" disabled>
+              <label for="icon_telephone">4076-****-****-9579</label>
+              <span class="helper-text" data-error="este campo es requerido!" data-success="campo llenado correctamente">datos de pago</span>
+            </div>
+            <div class="input-field col s4">
+              <i class="material-icons prefix">attach_money</i>
+              <input id="PRECI" type="number" name="PRICE" class="validate" value="399.00" disabled>
+              <label for="email"></label>
+              <span class="helper-text" data-error="este campo es requerido!" data-success="campo llenado correctamente">Precio</span>
+            </div>
+            <div class="input-field col s4">
+              <i class="material-icons prefix">inventory</i>
+              <input id="CANTI" type="number" name="NUMBER" class="validate" min="0" required>
+              <label for="email">ingrese la cantidad deseada</label>
+              <span class="helper-text" data-error="este campo es requerido!" data-success="campo llenado correctamente">Ingrese correo</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="FORMAT2" class="form-group row">
+          <div id="FORM1" class="col s12 right">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">home</i>
+              <input id="DIREC" type="text" name="DIRECCION" class="validate" required>
+              <label for="icon_telephone">Dirección</label>
+              <span class="helper-text" data-error="este campo es requerido!" data-success="campo llenado correctamente">Ingrese Direccion de envio</span>
+              <br>
+            </div>
+            <br>
+          </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="container">
+              <div class="col s3 right-align">
+                <p>
+                  <label>
+                    <input name="COLOR" type="radio" required/>
+                    <span>Azul-gris</span>
+                  </label>
+                </p>
+              </div>
+
+              <div class="col s3 center-align">
+                <p>
+                  <label>
+                    <input name="COLOR" type="radio" required/>
+                    <span>Azul-plata</span>
+                  </label>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col s6">
+                <a class="right waves-effect red accent-4 btn" href="index.html">Cancelar!</a>
+              </div>
+              <div class="col s2">
+                <button id="BOT1" type="submit" name="button" class="btn btn-primary right waves-effect blue accent-4">Ordenar!</button>
+              </div>
+            </div>
+          </div>
+
+      </form>
+
+
+
+
+      </div>
+
+  </body>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/init.js"></script>
+
+  <script>
+  $(document).ready(function() {
+      $('#BOT1').on('click', function(e) {
+          e.preventDefault();
+          var dataString = $('#Formulario').serialize();
+          console.log('Datos serializados: '+dataString);
+      });
+  });//Script que captura todo lo ingresado en el formulario
+  </script>
+
+  <script>
+  $(document).ready(function() {
+      $('#BOT1').on('click', function(e) {
+          e.preventDefault();
+          var PT = $("#CANTI").val();
+          PA=parseInt(PT);
+          console.log("el Precio Total es: Q."+399.00*PA);
+      });
+  });//Script que captura todo lo ingresado en el formulario
+  </script>
+
+ <script>
+      $(document).ready(function(){
+        $("#BOT1").click(function(){
+          $("#ACE").show(2000);
+        });
+      });
+  </script>
+
+  <script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems,{
+      preventScrolling: false,
+    });
+    var instance = M.Sidenav.getInstance(elem,{
+      isFixed: true,
+      isOpen: true;
+    });
+  });
+  </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems,{
+      opacity: 0.5,
+      inDuration: 1000
+    });
+  });//Formulario emergente
+  </script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems,{
+      duration: 500,
+      indicators: true
+    });
+  });//Carouseles
+  </script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems,{
+      indicators: false,
+      duration: 2000,
+      interval: 7500
+    });
+  });//Sliders
+  </script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems);
+  });//Selector multiple de opciones
+  </script>
+
+  <script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems,{
+      hover: true,
+      coverTrigger: false
+    });
+  });
+  </script>
+
+  <script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.scrollspy');
+    var instances = M.ScrollSpy.init(elems,{
+      throttle: 25,
+      scrollOffset: 50,
+    });
+  });
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+  var trig = 1;
+  //parche para chrome
+  $("#search").addClass('searchbarfix');
+    //animacion para que la barra de busqueda se aumente en 150%
+    $('#search').click(function(e) {
+         //manejador de lo que ocurre en el nav cuando se cliquea la search bar
+      $('.search-hide').addClass('hide');
+     if (trig == 1){
+        $('#navfix2').animate({
+          width: '+=150',
+          marginRight: 0
+        }, 400);
+       trig ++;
+       }
+    });
+    //si el usuario cliquea o sale de la search bar se reduce a su tamaño normal
+    $("#search").focusout(function() {
+        $('#navfix2').animate({
+        width: '-=150'
+      }, 400);
+     trig = trig - 1;
+      //maneja la visibilidad de otros elementos del nav
+  		$('.search-hide').removeClass('hide');
+    });
+  });
+  </script>
+</html>
